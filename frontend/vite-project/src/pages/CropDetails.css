@@ -1,0 +1,274 @@
+.crop-details-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px;
+}
+
+.crop-details-container h1 {
+    text-align: center;
+    color: #245c35;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.crop-details-card {
+    background-color: #ffffff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8e2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.crop-details-card h2 {
+    color: #245c35;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.crop-details-card p {
+    color: #555;
+    font-size: 16px;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+.crop-details-card img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.crop-details-card h3 {
+    color: #245c35;
+    font-size: 21px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2e8e2;
+    padding-bottom: 10px;
+}
+.crop-details-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 25px;
+    align-items: start;
+}
+.crop-image-section {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #f1f5f1;
+}
+.crop-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.crop-info-section {
+    padding: 10px 5px;
+}
+.crop-category {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #245c35;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.crop-info-section h2 {
+    font-size: 32px;
+    color: #245c35;
+    margin: 18px 0;
+    text-transform: capitalize;
+}
+.crop-price {
+    font-size: 30px;
+    color: #238443;
+    margin-bottom: 25px;
+}
+
+.crop-price span {
+    font-size: 15px;
+    color: #777;
+    font-weight: 400;
+}
+.crop-info-list {
+    border-top: 1px solid #e5eae5;
+    border-bottom: 1px solid #e5eae5;
+    padding: 15px 0;
+}
+.crop-info-list p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #555;
+    margin: 14px 0;
+}
+.crop-info-list strong {
+    color: #333;
+    min-width: 110px;
+}
+.crop-description {
+    margin-top: 25px;
+}
+.crop-description h3 {
+    font-size: 19px;
+    color: #245c35;
+    margin-bottom: 10px;
+}
+.crop-description p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    background-color: #f7faf7;
+    padding: 15px;
+    border-radius: 8px;
+}
+.farmer-details-section {
+    margin-top: 35px;
+    padding: 25px;
+    background-color: #f5faf5;
+    border: 1px solid #e2eee2;
+    border-radius: 12px;
+}
+.farmer-details-section h3 {
+    font-size: 21px;
+    color: #245c35;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dce8dc;
+}
+.farmer-details-section p {
+    font-size: 15px;
+    color: #555;
+    margin: 12px 0;
+}
+
+.farmer-details-section strong {
+    color: #333;
+    margin-right: 8px;
+}
+.no-crop-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    color: #245c35;
+    font-size: 65px;
+}
+
+.no-crop-image p {
+    font-size: 15px;
+    margin-top: 12px;
+    color: #56745a;
+}
+.contact-farmer-btn{
+    margin: 20px;
+    padding: 12px 24px;
+ background-color: #238443;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.contact-farmer-btn:hover {
+    background-color: #1b6633;
+}
+
+.contact-farmer-btn:disabled {
+    background-color: #8ab99a;
+    cursor: not-allowed;
+}
+.farmer-contact-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dce8dc;
+    border-radius: 10px;
+}
+
+.farmer-contact-info h4 {
+    color: #245c35;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.farmer-contact-info p {
+    color: #555;
+    font-size: 14px;
+    margin: 12px 0;
+    line-height: 1.5;
+}
+
+.farmer-contact-info strong {
+    color: #333;
+    margin-right: 8px;
+}
+
+/* Responsive*/
+@media (max-width: 768px) {
+
+    .crop-details-container {
+        padding: 20px 15px;
+    }
+
+    .crop-details-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .crop-image-section {
+        height: 300px;
+    }
+
+    .crop-info-section h2 {
+        font-size: 27px;
+    }
+
+    .crop-price {
+        font-size: 26px;
+    }
+
+    .farmer-details-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .crop-details-container {
+        padding: 15px 12px;
+    }
+
+    .crop-details-container h1 {
+        font-size: 24px;
+    }
+
+    .crop-image-section {
+        height: 230px;
+    }
+
+    .crop-info-section h2 {
+        font-size: 24px;
+    }
+
+    .crop-info-list p {
+        font-size: 14px;
+    }
+
+    .farmer-details-section {
+        padding: 16px;
+    }
+}

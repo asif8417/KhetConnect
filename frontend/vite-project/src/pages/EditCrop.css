@@ -1,0 +1,93 @@
+.edit-crop-container{
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+}
+.edit-crop-container h2{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #2e7d32;
+}
+.edit-crop-container .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.edit-crop-container .form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333333;
+}
+.edit-crop-container .form-group input,
+.edit-crop-container .form-group select,
+.edit-crop-container .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.edit-crop-container .form-group input:focus,
+.edit-crop-container .form-group select:focus,
+.edit-crop-container .form-group textarea:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 4px rgba(46, 125, 50, 0.2);
+}
+.update-crop-btn {
+    width: 100%;
+    padding: 13px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-crop-btn:hover {
+    background-color: #1b5e20;
+}
+
+@media (max-width: 768px) {
+    .edit-crop-container {
+        width: 90%;
+        margin: 25px auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .edit-crop-container h2 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-crop-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .edit-crop-container .form-group input,
+    .edit-crop-container .form-group select,
+    .edit-crop-container .form-group textarea {
+        font-size: 14px;
+    }
+}
+
+/* @media: Applies CSS according to screen size.
+768px: Tablet and smaller screens.
+480px: Small mobile screens.
+width: 95%: Uses almost the full mobile screen width. */

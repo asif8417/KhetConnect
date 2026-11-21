@@ -1,0 +1,237 @@
+.marketplace-container{
+    max-width: 2000px;
+    margin: auto;
+    padding: 20px 15px;
+    width: 100%;
+}
+.marketplace-container h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #245c35;
+    margin-bottom: 30px;
+}
+
+.marketplace-layout{
+    display:grid;
+    grid-template-columns: 230px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+.category-sidebar{
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e2e8e2;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    margin-right: 0px;
+}
+
+.category-sidebar h3 {
+    color: #245c35;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+.category-btn{
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 7px;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #f5f8f5;
+    color: #444;
+    transition: 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #eaf5ec;
+    color: #245c35;
+}
+
+.category-btn.active {
+    background-color: #245c35;
+    color: #ffffff;
+    font-weight: 600;
+}
+.marketplace-content {
+    min-width: 0;
+}
+.marketplace-crops{
+    display: grid;  /*  260px → Each card should have at least 260px width.
+                        1fr → Cards can expand to use available space.
+                        auto-fit → Automatically adjusts the number of columns according to available space.*/
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+     gap: 25px;
+    margin-top: 0px;
+
+}
+.crop-card {
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e2e8e2;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.crop-card h3 {
+    font-size: 22px;
+    color: #245c35;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.crop-card p {
+    font-size: 15px;
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+.farmer-info {
+    background-color: #eaf5ec;
+    padding: 10px;
+    border-radius: 8px;
+    color: #245c35 !important;
+    font-weight: 500;
+}
+
+.farmer-info span {
+    font-weight: 700;
+}
+.crop-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.marketplace-search{
+    max-width: 1400px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+.marketplace-search input:first-child {
+    flex: 2;
+}
+.marketplace-search input:nth-child(2) {
+    flex: 1;
+}
+
+.marketplace-search input {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    
+}
+.marketplace-search input:focus{
+    border-color: #245c35;
+    box-shadow: 0 0 5px rgba(36, 92, 53, 0.2);
+
+}
+.marketplace-search button {
+    flex: 0 0 120px;
+    padding: 14px 20px;
+    background-color: #245c35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.marketplace-search button:hover {
+    background-color: #194528;
+}
+.marketplace-search select {
+    flex: 0 0 180px;
+    box-sizing: border-box;
+    padding: 14px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+.marketplace-search select:focus {
+    border-color: #245c35;
+    box-shadow: 0 0 5px rgba(36, 92, 53, 0.2);
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+    .marketplace-search {
+        flex-direction: column;
+    }
+
+    .marketplace-container {
+        padding: 25px 15px;
+    }
+
+    .marketplace-container h1 {
+        font-size: 28px;
+    }
+
+    .marketplace-crops {
+        gap: 18px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .marketplace-search {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .marketplace-search input,
+    .marketplace-search select,
+    .marketplace-search button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .marketplace-container {
+        padding: 20px 12px;
+    }
+
+    .marketplace-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .marketplace-crops {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .crop-card {
+        padding: 16px;
+    }
+
+    .crop-card h3 {
+        font-size: 20px;
+    }
+
+    .crop-card p {
+        font-size: 14px;
+    }
+
+    .crop-image {
+        height: 160px;
+    }
+}

@@ -1,6 +1,6 @@
 const express=require("express");
 const router=express.Router();
-const authMiddleware=require("../middleware/authMiddlewaare");
+const authMiddleware=require("../middleware/authMiddleware");
 
 //Get logged-in user profile...
 

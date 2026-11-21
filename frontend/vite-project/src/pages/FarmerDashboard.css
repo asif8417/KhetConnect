@@ -1,0 +1,308 @@
+/* Main Dashboard Layout */
+
+.farmer-dashboard{
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f7f2;
+
+}
+/* Sidebar */
+.farmer-sidebar{
+    width: 250px;
+  background-color: #1b4332;
+    color: white;
+    flex-shrink: 0;
+    padding: 25px 20px;
+}
+.farmer-sidebar h2 {
+    margin-bottom: 40px;
+    font-size: 23px;
+}
+.farmer-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.farmer-sidebar li {
+    margin-bottom: 12px;
+}
+.farmer-sidebar a{
+    display: block;
+    color: #e9f5ec;
+    text-decoration: none;
+    padding: 13px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.farmer-sidebar a:hover {
+    background-color: #2d6a4f;
+}
+
+        /* Main Content */
+.farmer-main{
+    flex: 1;
+    padding: 35px;
+    min-width: 0;
+}
+
+        /* Header */
+.farmer-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+.farmer-header h1 {
+    color: #1b4332;
+    margin-bottom: 8px;
+}
+
+.farmer-header p {
+    color: #666;
+}
+            /* Add Crop Button */
+.add-crop-btn {
+    background-color: #2d6a4f;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+.add-crop-btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+        /* Statistics */
+.farmer-stats{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+
+}
+.stat-card{
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h3 {
+    color: #666;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.stat-card h2 {
+    color: #1b4332;
+    font-size: 30px;
+    margin-top: 12px;
+}
+
+/* Recent Crops */
+.recent-crops {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    
+}
+.recent-crops h2 {
+    color: #1b4332;
+    margin-bottom: 25px;
+}
+.empty-crops {
+    text-align: center;
+    padding: 45px 20px;
+    background-color: #f8faf7;
+    border-radius: 10px;
+}
+.empty-crops h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.empty-crops p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.empty-crops a {
+    display: inline-block;
+    background-color: #2d6a4f;
+    color: white;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 7px;
+}
+
+.edit-crop-btn,
+.delete-crop-btn {
+    display: inline-block;
+    padding: 9px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.crop-image{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border-radius:8px;
+}
+.crop-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.edit-crop-btn{
+    background-color: #2e7d32;
+    color: white;
+    
+    
+}
+
+.delete-crop-btn {
+    background-color: #d32f2f;
+    color: white;
+    
+}
+
+.edit-crop-btn:hover {
+    background-color: #1b5e20;
+}
+
+.delete-crop-btn:hover {
+    background-color: #b71c1c;
+}
+.farmer-search{
+    max-width: 1500px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.farmer-search input{
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 20px;
+    outline: none;
+        transition: 0.3s ease;
+        flex: 1;
+        min-width: 0;
+
+}
+.farmer-search input:focus{
+    border-color: #245c35;
+    box-shadow: 0 0 5px rgba(36, 92, 53, 0.2);
+
+}
+.farmer-search button {
+       padding: 14px 25px;
+    background-color: #245c35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.farmer-search button:hover {
+    background-color: #194528;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .farmer-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .farmer-dashboard {
+        flex-direction: column;
+    }
+
+    .farmer-sidebar {
+        width: auto;
+    }
+
+    .farmer-sidebar h2 {
+        margin-bottom: 15px;
+    }
+
+    .farmer-sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .farmer-sidebar li {
+        margin: 0;
+    }
+
+    .farmer-main {
+        padding: 20px;
+    }
+
+    .farmer-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .farmer-stats {
+        grid-template-columns: 1fr;
+    }
+}
+/* Crop Listings */
+.crop-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+.crop-card {
+    background-color: #f8faf7;
+    border: 1px solid #e2eadf;
+    border-radius: 12px;
+    padding: 22px;
+    transition: 0.3s ease;
+}
+.crop-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.crop-card h3 {
+    color: #1b4332;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.crop-card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.crop-card p:last-child {
+    display: inline-block;
+    background-color: #d8f3dc;
+    color: #1b4332;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
